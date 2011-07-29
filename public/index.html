@@ -1,239 +1,163 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
+    <title>DilipChouhan.com</title>
+    <meta charset="UTF-8">
+    <meta name='description' content="Dilip On ruby On Rails" />
+
+    <link rel='shortcut icon' href='favicon.png' />
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <style type='text/css'>
+      /* General */
+      * {
+        margin:0; padding:0;
+      }
       body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
+        font: 11px/normal Arial, Verdana, sans-serif;
       }
-
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
+      a {
+        color: inherit;
         text-decoration: none;
       }
+      a:hover {
+        text-decoration: underline;
+      }
+      .hidden {
+        display: none;
+      }
+      .compact-bottom {
+        margin-bottom:0; margin-top:0;
+      }
 
-
+      /* Layout */
       #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
+        width: 700px;
+        margin: 0 auto;
       }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
+      table {
+        margin: 100px auto 25px;
+        padding: 0 0 75px 0;
       }
-
-      #sidebar {
-        float: right;
-        width: 175px;
+      .left, .right {
+        width: 350px;
       }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
+      h1, h2, h3, h4 {
+        font-family: Georgia, Garamond, 'Times New Roman', Times, serif;
         font-weight: normal;
-        font-size: 16px;
+        text-transform: lowercase;
       }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
+      /* Left side */
+      .left {
+        text-align: right;
       }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
+      h1 {
+        font-size: 60px;
+        margin: 0 0 30px 0;
+        color: #000;
       }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
+      h2 {
+        font-size: 30px;
+        margin: 0 0 5px 0;
+        color: #c00;
       }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
+      /* Right side */
+      .right {
+        text-align: center;
+        vertical-align: middle;
+        padding: 0 15px;
       }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
+      .blog {
+        margin-bottom: 15px;
       }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
+      h3 {
         font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
         margin-bottom: 5px;
       }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
+      h4 {
+        font-size: 13px;
+        font-family: Inconsolata, monospace;
       }
+
+      /* Footer */
+      #footer {
+        font: 10px/normal 'Lucida Grande', Verdana, Arial, sans-serif;
+        padding: 100px 0 10px 0;
+        clear: both;
+        text-align: center;
+      }
+      #footer a {
+        color: #c00;
+        margin: 0;
+      }
+    </style>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
+    <script>
+      $(function () {
+        $('#links').children().hover(function () {
+          var rootId = this.id.replace('-link', '');
+          $('#' + rootId + '-panel').fadeTo(400, 1).siblings().stop().hide();
+          $('table').mouseleave(function () {
+            $('#fade-panel').children().fadeOut();
+          });
+        });
+      });
     </script>
   </head>
+
   <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    <div id='page'>
+      <table>
+        <tr>
 
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
+          <td class='left top' ><h1><a href=''>Dilip Chouhan</a></h1></td>
+          <td class='right top'></td>
+        </tr>
+        <tr>
+          <td class='left bottom' id='links'>
+            <h2 id='blogs-link'  ><a href='javascript:void(0)'>Blogs</a></h2>
+            <h2 id='about-link'  ><a href='javascript:void(0)'            >About</a></h2>
 
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
+            <h2 id='resume-link' ><a href='javascript:void(0)'           >Resume</a></h2>
+            <h2 id='contact-link'><a href='javascript:void(0)'          >Contact</a></h2>
+          </td>
+          <td class='right bottom' id='fade-panel'>
+            <div id='blogs-panel' class='hidden'>
+              <div class='blog'>
+                <h3 class='compact-bottom'><a href='javascript:void(0)'>Lifeblog</a></h3>
 
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
+                <h4><a href='javascript:void(0)'>Where I blog about life</a></h4>
+              </div>
+              <div class='blog'>
+                <h3 class='compact-bottom'><a href='javascript:void(0)'>Techblog</a></h3>
+                <h4><a href='javascript:void(0)'>My adventures in technology</a></h4>
+              </div>
+            </div>
 
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
+            <div id='about-panel' class='hidden'>
+              <h3><a href='javascript:void(0)'>Come meet me!</a></h3>
+              <h4><a href='javascript:void(0)'>I live in Indore<br />with a fucker freinds.</a></h4>
+            </div>
 
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
+            <div id='resume-panel' class='hidden'>
+              <h3><a href='javascript:void(0)'>I'm a web-developer!</a></h3>
 
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
+              <h4>Check out my<br /><a href='javascript:void(0)'>work experience</a>,<br /><a href='javascript:void(0)'>projects</a>, <a href='javascript:void(0)'>and demos</a></h4>
+            </div>
 
-      <div id="footer">&nbsp;</div>
+            <div id='contact-panel' class='hidden'>
+              <h3><a href='javascript:void(0)'>Say hi!</a></h3>
+              <h4><a href='javascript:void(0)'>Send me an email</a>,<br />or <a href='javascript:void(0)'>follow me socially.</a><h4>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div><!--page-->
+
+    <div id='footer'>
+Footer
     </div>
+
   </body>
 </html>
